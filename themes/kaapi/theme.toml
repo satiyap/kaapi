@@ -1,0 +1,13 @@
+name = "Kaapi"
+license = "MIT"
+licenselink = "https://github.com/satiyap/kaapi/blob/main/LICENSE"
+description = "A minimal, responsive Hugo theme inspired by Substack's default theme"
+homepage = "https://github.com/satiyap/kaapi"
+demosite = "https://github.com/satiyap/kaapi"
+tags = ["blog", "minimal", "responsive", "clean", "substack"]
+features = ["responsive", "minimal", "blog", "clean-design"]
+min_version = "0.146.0"
+
+[author]
+  name = "Satiya"
+  homepage = "https://github.com/satiyap"

@@ -1,0 +1,22 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  <div class="post-list">
+    {{ range .Pages }}
+      <article class="post-item">
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        {{ if .Date }}
+          {{ $dateMachine := .Date | time.Format "2006-01-02" }}
+          {{ $dateHuman := .Date | time.Format "January 2, 2006" }}
+          <div class="post-meta">
+            <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+          </div>
+        {{ end }}
+        <div class="post-summary">{{ .Summary }}</div>
+        {{ if .Truncated }}
+          <a href="{{ .RelPermalink }}" class="read-more">Continue reading →</a>
+        {{ end }}
+      </article>
+    {{ end }}
+  </div>
+{{ end }}

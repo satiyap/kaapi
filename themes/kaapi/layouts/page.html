@@ -1,0 +1,27 @@
+{{ define "main" }}
+  <article>
+    <h1>{{ .Title }}</h1>
+
+    {{ if .Date }}
+      {{ $dateMachine := .Date | time.Format "2006-01-02" }}
+      {{ $dateHuman := .Date | time.Format "January 2, 2006" }}
+      <div class="post-meta">
+        <div class="post-meta-item">
+          <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+        </div>
+        {{ if .ReadingTime }}
+          <span class="post-meta-separator">•</span>
+          <div class="post-meta-item">
+            {{ .ReadingTime }} min read
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+
+    {{ partial "toc.html" . }}
+
+    {{ .Content }}
+
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  </article>
+{{ end }}

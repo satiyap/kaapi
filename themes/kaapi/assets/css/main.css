@@ -1,0 +1,750 @@
+/* ========================================
+   CSS Variables & Theme Colors
+   South Indian Filter Coffee - Strong & Bold
+   ======================================== */
+:root {
+  /* Filter Coffee Strength */
+  --bg-primary: #fdfcfa;
+  --bg-secondary: #f8f6f3;
+  --bg-elevated: #ffffff;
+  --text-primary: #1a0f08;
+  --text-secondary: #3d2817;
+  --text-tertiary: #5a3d28;
+  --border-color: #d9cfc4;
+  --border-hover: #c4b5a5;
+  --accent-primary: #8b4513;
+  --accent-secondary: #6b3410;
+  --accent-hover: #a0522d;
+  --link-color: #8b4513;
+  --link-hover: #6b3410;
+  --code-bg: #f5f2ee;
+  --code-border: #d9cfc4;
+  --shadow-sm: 0 1px 3px rgba(107,52,16,0.12);
+  --shadow-md: 0 4px 6px rgba(107,52,16,0.18);
+  --shadow-lg: 0 10px 15px rgba(107,52,16,0.22);
+  /* Strong filter coffee gradient - dark browns only */
+  --gradient-accent: linear-gradient(135deg, #6b3410 0%, #8b4513 40%, #a0522d 70%, #cd853f 100%);
+  --gradient-subtle: linear-gradient(135deg, #faf8f5 0%, #f5f2ee 100%);
+  --gradient-warm: linear-gradient(to right, #6b3410 0%, #8b4513 50%, #a0522d 100%);
+}
+
+/* ========================================
+   Reset & Base Styles
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+}
+
+/* ========================================
+   Layout Container
+   ======================================== */
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ========================================
+   Header
+   ======================================== */
+header {
+  padding: 48px 0 40px;
+  margin-bottom: 56px;
+}
+
+.site-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+header h1 {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 0;
+  letter-spacing: -0.03em;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+header h1 a {
+  color: inherit;
+  text-decoration: none;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Author Navigation */
+.author-nav {
+  display: flex;
+  align-items: center;
+}
+
+.author-nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.author-nav a:hover {
+  color: var(--accent-primary);
+}
+
+/* ========================================
+   Main Content
+   ======================================== */
+main {
+  min-height: 60vh;
+  margin-bottom: 64px;
+}
+
+/* ========================================
+   Typography
+   ======================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  scroll-margin-top: 80px;
+}
+
+/* Article post titles (single page) */
+article h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  margin-top: 0;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+/* Hover-animated progress bar for article post titles */
+article h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--gradient-warm);
+  box-shadow: 0 1px 8px rgba(107, 52, 16, 0.4);
+  transition: width 0.6s ease;
+}
+
+article h1:hover::after {
+  width: 100%;
+}
+
+/* Content headings (h2, h3, h4 inside articles) */
+article h2 {
+  font-size: 26px;
+  margin-top: 48px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
+  font-weight: 700;
+}
+
+article h3 {
+  font-size: 22px;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+article h4 {
+  font-size: 19px;
+  margin-top: 32px;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+/* Generic fallbacks for non-article headings */
+h1 {
+  font-size: 34px;
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 26px;
+  margin-top: 48px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+h3 {
+  font-size: 22px;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 19px;
+  margin-top: 32px;
+}
+
+p {
+  margin-bottom: 28px;
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   Post Meta & Reading Info
+   ======================================== */
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-tertiary);
+  font-size: 15px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.post-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.post-meta-separator {
+  color: var(--border-color);
+}
+
+/* ========================================
+   Post Listings
+   ======================================== */
+.post-list {
+  margin-top: 56px;
+  border-top: none;
+}
+
+/* Remove any horizontal rules */
+hr {
+  display: none;
+}
+
+.post-item {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-item > h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 26px;
+  font-weight: 800;
+  border-bottom: none;
+  padding-bottom: 12px;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+/* Hover-animated progress bar under post titles - LTR on hover, RTL on mouse out */
+.post-item > h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--gradient-warm);
+  box-shadow: 0 1px 8px rgba(107, 52, 16, 0.4);
+  transition: width 0.6s ease;
+}
+
+.post-item > h2:hover::after {
+  width: 100%;
+}
+
+.post-item h2 a {
+  color: inherit;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.post-item h2 a:hover {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: none;
+}
+
+.post-summary {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-primary);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.read-more::after {
+  content: '→';
+  display: inline-block;
+}
+
+.read-more:hover {
+  color: var(--accent-hover);
+}
+
+.read-more:hover::after {
+  animation: arrowSlide 1.2s ease-in-out infinite;
+}
+
+@keyframes arrowSlide {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}
+
+/* ========================================
+   Tags & Categories
+   ======================================== */
+.tags {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.tag:hover {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  border-color: var(--accent-primary);
+}
+
+/* ========================================
+   Code Blocks
+   ======================================== */
+code {
+  font-family: 'SF Mono', 'Monaco', 'Consolas', 'Liberation Mono', monospace;
+  font-size: 0.9em;
+  background: var(--code-bg);
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--code-border);
+  color: var(--accent-primary);
+}
+
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 8px;
+  padding: 24px;
+  overflow-x: auto;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* ========================================
+   Blockquotes - Coffee-stained note style
+   ======================================== */
+blockquote {
+  border-left: 4px solid var(--accent-primary);
+  padding-left: 24px;
+  margin: 32px 0;
+  color: var(--text-secondary);
+  font-style: italic;
+  background: var(--bg-secondary);
+  padding: 20px 24px;
+  border-radius: 0 8px 8px 0;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Strong filter coffee stain on notes */
+blockquote::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, transparent 40%, rgba(107, 52, 16, 0.12) 60%, transparent 80%);
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   Lists
+   ======================================== */
+ul, ol {
+  margin-bottom: 28px;
+  padding-left: 32px;
+}
+
+li {
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+li::marker {
+  color: var(--accent-primary);
+}
+
+/* ========================================
+   Images & Media
+   ======================================== */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 32px 0;
+  box-shadow: var(--shadow-md);
+}
+
+figure {
+  margin: 32px 0;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-tertiary);
+  margin-top: 12px;
+  font-style: italic;
+}
+
+/* ========================================
+   Tables
+   ======================================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0;
+  box-shadow: var(--shadow-sm);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background: var(--gradient-accent);
+  color: white;
+}
+
+th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr {
+  background: var(--bg-primary);
+  transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+  background: var(--bg-secondary);
+}
+
+/* ========================================
+   Table of Contents
+   ======================================== */
+.toc {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+.toc-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Removed - using coffee emoji in HTML */
+
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.toc li {
+  margin-bottom: 8px;
+}
+
+.toc a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  display: block;
+  padding: 4px 0;
+}
+
+.toc a:hover {
+  color: var(--accent-primary);
+}
+
+.toc > ul > li > ul {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+footer {
+  padding: 40px 0;
+  border-top: 1px solid var(--border-color);
+  margin-top: 80px;
+  text-align: center;
+}
+
+footer p {
+  color: var(--text-tertiary);
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* ========================================
+   Utility Classes
+   ======================================== */
+.gradient-text {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-large {
+  margin-top: 64px;
+}
+
+.mb-large {
+  margin-bottom: 64px;
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  header {
+    padding: 36px 0 28px;
+    margin-bottom: 36px;
+  }
+
+  .site-title-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Site title - largest */
+  header h1 {
+    font-size: 28px;
+  }
+
+  .author-nav a {
+    font-size: 15px;
+  }
+
+  /* Post title on detail page */
+  article h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+  }
+
+  /* Content headings inside posts */
+  article h2 {
+    font-size: 20px;
+    margin-top: 36px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+  }
+
+  article h3 {
+    font-size: 18px;
+    margin-top: 28px;
+    margin-bottom: 12px;
+  }
+
+  article h4 {
+    font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+  }
+
+  /* Generic fallbacks */
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  /* Post list items */
+  .post-item {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+  }
+
+  .post-item > h2 {
+    font-size: 22px;
+    padding-bottom: 10px;
+  }
+
+  .post-meta {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .post-summary {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .toc {
+    padding: 16px;
+    margin-bottom: 28px;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  th, td {
+    padding: 8px 10px;
+  }
+}
