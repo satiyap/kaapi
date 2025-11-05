@@ -1,11 +1,11 @@
 name = "Kaapi"
 license = "MIT"
 licenselink = "https://github.com/satiyap/kaapi/blob/main/LICENSE"
-description = "A minimal, responsive Hugo theme inspired by Substack's default theme"
+description = "A minimal, responsive Hugo theme inspired by filter coffee—focused, clean, and crafted with patience"
 homepage = "https://github.com/satiyap/kaapi"
 demosite = "https://github.com/satiyap/kaapi"
-tags = ["blog", "minimal", "responsive", "clean", "substack"]
-features = ["responsive", "minimal", "blog", "clean-design"]
+tags = ["blog", "minimal", "responsive", "clean", "coffee", "single-author"]
+features = ["responsive", "minimal", "blog", "clean-design", "single-author", "toc"]
 min_version = "0.146.0"
 
 [author]

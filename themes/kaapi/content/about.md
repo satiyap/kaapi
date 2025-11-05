@@ -5,7 +5,7 @@ date: 2025-01-20
 
 ## About This Blog
 
-Welcome! This is a space for thoughts, ideas, and musings on topics that matter. Like a good cup of South Indian filter coffee—strong, bold, and honest.
+Welcome! This is a space for thoughts, ideas, and musings on topics that matter. Like a good cup of filter coffee—focused, clear, and honest.
 
 ## What You'll Find Here
 

@@ -1,4 +1,4 @@
-# 🥃 Kaapi Hugo Theme
+# Kaapi Hugo Theme
 
 **Kaapi** (காபி) — South Indian filter coffee — is a bold, strong Hugo theme inspired by the authentic character of traditional filter kaapi. Like the dark, rich decoction brewed slowly through the filter, this theme is intense, no-compromise design that energizes your content.
 

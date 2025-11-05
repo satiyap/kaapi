@@ -28,13 +28,13 @@ Add the theme to your `hugo.toml`:
 ```toml
 [module]
   [[module.imports]]
-    path = "github.com/yourusername/kaapi"
+    path = "github.com/satiyap/kaapi"
 ```
 
 ### As a Git Submodule
 
 ```bash
-git submodule add https://github.com/yourusername/kaapi.git themes/kaapi
+git submodule add https://github.com/satiyap/kaapi.git themes/kaapi
 ```
 
 Then add to your `hugo.toml`:
@@ -49,7 +49,7 @@ Clone this repository into your `themes` directory:
 
 ```bash
 cd themes
-git clone https://github.com/yourusername/kaapi.git
+git clone https://github.com/satiyap/kaapi.git
 ```
 
 ## Configuration
