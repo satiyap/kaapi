@@ -45,7 +45,7 @@ themes/kaapi/
 │   └── js/           # JavaScript files (optional)
 ├── content/          # Example content for theme demo
 ├── layouts/          # Template files
-│   ├── _partials/    # Reusable template components
+│   ├── partials/     # Reusable template components
 │   ├── baseof.html   # Base template (defines HTML structure)
 │   ├── home.html     # Homepage template
 │   ├── page.html     # Single page template
@@ -98,7 +98,7 @@ Hugo uses a template lookup order. Key templates in this theme:
 
 ### Partials
 
-Reusable components in `layouts/_partials/`:
+Reusable components in `layouts/partials/`:
 
 - **header.html** - Site title (linked to home) and About link navigation
 - **footer.html** - Theme attribution
@@ -232,7 +232,7 @@ Users can override:
 
 1. **Templates**: Create matching file in site's `layouts/` directory
 2. **CSS**: Create `assets/css/main.css` in site to override theme CSS
-3. **Partials**: Override any partial by creating same path in site's `layouts/_partials/`
+3. **Partials**: Override any partial by creating same path in site's `layouts/partials/`
 4. **Configuration**: Set params, menus, and taxonomies in `hugo.toml`
 5. **About Page**: Create `content/about.md` to override default
 
