@@ -1,22 +1,26 @@
 {{ define "main" }}
+<section class="page-hero">
+  <span class="eyebrow">All posts</span>
   <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  <div class="post-list">
-    {{ range .Pages }}
-      <article class="post-item">
-        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+  {{ with .Params.description }}<p class="lede">{{ . }}</p>{{ end }}
+</section>
+
+<section class="post-list" aria-label="All posts">
+  {{ range .Pages.ByDate.Reverse }}
+    <a class="post-row" href="{{ .RelPermalink }}">
+      <div class="post-row-content">
         {{ if .Date }}
-          {{ $dateMachine := .Date | time.Format "2006-01-02" }}
-          {{ $dateHuman := .Date | time.Format "January 2, 2006" }}
-          <div class="post-meta">
-            <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-          </div>
+          {{ $machine := .Date | time.Format "2006-01-02" }}
+          {{ $human := .Date | time.Format "Jan 02, 2006" }}
+          <time class="post-row-meta" datetime="{{ $machine }}">{{ $human }}</time>
         {{ end }}
-        <div class="post-summary">{{ .Summary }}</div>
-        {{ if .Truncated }}
-          <a href="{{ .RelPermalink }}" class="read-more">Continue reading →</a>
+        <h2 class="post-row-title">{{ .LinkTitle }}</h2>
+        {{ with .Params.description | default .Summary }}
+          <p class="post-row-summary">{{ . | plainify }}</p>
         {{ end }}
-      </article>
-    {{ end }}
-  </div>
+      </div>
+      <span class="post-row-accent" aria-hidden="true"></span>
+    </a>
+  {{ end }}
+</section>
 {{ end }}

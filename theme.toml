@@ -9,5 +9,5 @@ features = ["responsive", "minimal", "blog", "clean-design", "single-author", "t
 min_version = "0.146.0"
 
 [author]
-  name = "Satiya"
+  name = "satiyap"
   homepage = "https://github.com/satiyap"

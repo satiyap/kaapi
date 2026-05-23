@@ -1,0 +1,1498 @@
+{
+  "version": "2.11",
+  "children": [
+    {
+      "type": "frame",
+      "id": "XWxmu",
+      "x": 0,
+      "y": 0,
+      "name": "Home",
+      "clip": true,
+      "width": 1280,
+      "height": 580,
+      "fill": "$surface-primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "vcQwL",
+          "name": "Nav",
+          "width": "fill_container",
+          "padding": [
+            28,
+            150
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "oynxE",
+              "name": "Brand lockup",
+              "gap": 18,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "Xz2Xt",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "static/logo.png",
+                    "mode": "fit"
+                  },
+                  "width": 96,
+                  "height": 96
+                },
+                {
+                  "type": "frame",
+                  "id": "rCylr",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ipw4D",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "B3yTu3",
+                          "fill": "$fg-primary",
+                          "content": "by",
+                          "fontFamily": "$font-wordmark",
+                          "fontSize": 28,
+                          "fontWeight": "900",
+                          "letterSpacing": -0.5
+                        },
+                        {
+                          "type": "text",
+                          "id": "FFxJ8",
+                          "fill": "$accent-tertiary",
+                          "content": "2",
+                          "fontFamily": "$font-wordmark",
+                          "fontSize": 28,
+                          "fontWeight": "900",
+                          "letterSpacing": -0.5
+                        },
+                        {
+                          "type": "text",
+                          "id": "ozjAF",
+                          "fill": "$fg-primary",
+                          "content": "kaapi",
+                          "fontFamily": "$font-wordmark",
+                          "fontSize": 28,
+                          "fontWeight": "900",
+                          "letterSpacing": -0.5
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "TcGfJ",
+                      "fill": "$fg-secondary",
+                      "content": "Morning coffee, brewed and filtered.",
+                      "lineHeight": 1.2,
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "normal",
+                      "fontStyle": "italic"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "V3YGfa",
+              "gap": 36,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "TGc32",
+                  "fill": "$fg-primary",
+                  "content": "Posts",
+                  "fontFamily": "$font-body",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "WzZkt",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "kgFCi",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "rss",
+                      "iconFontFamily": "lucide",
+                      "fill": "$fg-primary"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "zKrWN",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "github",
+                      "iconFontFamily": "lucide",
+                      "fill": "$fg-primary"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "XTM4K",
+          "name": "Post list",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            200,
+            80,
+            200
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "jtCJD",
+              "fill": "$fg-secondary",
+              "content": "RECENT POSTS",
+              "fontFamily": "$font-caption",
+              "fontSize": 11,
+              "fontWeight": "normal",
+              "letterSpacing": 2.5
+            },
+            {
+              "type": "frame",
+              "id": "d7Uj5",
+              "width": "fill_container",
+              "height": 24
+            },
+            {
+              "type": "frame",
+              "id": "BhBe0",
+              "name": "Post row",
+              "width": "fill_container",
+              "stroke": {
+                "thickness": {
+                  "top": 1
+                },
+                "fill": "$border-subtle"
+              },
+              "gap": 32,
+              "padding": [
+                28,
+                0
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "uxaal",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "c3vPv",
+                      "gap": 14,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lbYxa",
+                          "fill": "$fg-secondary",
+                          "content": "NOV 02, 2025",
+                          "fontFamily": "$font-caption",
+                          "fontSize": 11,
+                          "fontWeight": "normal",
+                          "letterSpacing": 1.8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "o4SIj",
+                      "fill": "$fg-primary",
+                      "content": "Hello World",
+                      "fontFamily": "$font-heading",
+                      "fontSize": 34,
+                      "fontWeight": "500",
+                      "fontStyle": "italic"
+                    },
+                    {
+                      "type": "text",
+                      "id": "gFsNl",
+                      "fill": "$fg-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "An initial post that tests if everything is working as expected — Hugo, the Kaapi theme, and the auto-deploy pipeline.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font-body",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "Y9VcX",
+                  "fill": "$accent-primary",
+                  "width": 64,
+                  "height": 14
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "D25Ln",
+      "x": 1400,
+      "y": 0,
+      "name": "Post detail",
+      "clip": true,
+      "width": 1280,
+      "height": 1500,
+      "fill": "$surface-primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "VXfUp",
+          "width": "fill_container",
+          "padding": [
+            28,
+            150
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "mbeSC",
+              "name": "Brand lockup",
+              "gap": 18,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "V8JAaT",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "static/logo.png",
+                    "mode": "fit"
+                  },
+                  "width": 96,
+                  "height": 96
+                },
+                {
+                  "type": "frame",
+                  "id": "BiGMu",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "i223f",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "N2HQu",
+                          "fill": "$fg-primary",
+                          "content": "by",
+                          "fontFamily": "$font-wordmark",
+                          "fontSize": 28,
+                          "fontWeight": "900",
+                          "letterSpacing": -0.5
+                        },
+                        {
+                          "type": "text",
+                          "id": "DUWmy",
+                          "fill": "$accent-tertiary",
+                          "content": "2",
+                          "fontFamily": "$font-wordmark",
+                          "fontSize": 28,
+                          "fontWeight": "900",
+                          "letterSpacing": -0.5
+                        },
+                        {
+                          "type": "text",
+                          "id": "H2gdnS",
+                          "fill": "$fg-primary",
+                          "content": "kaapi",
+                          "fontFamily": "$font-wordmark",
+                          "fontSize": 28,
+                          "fontWeight": "900",
+                          "letterSpacing": -0.5
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "JWqiA",
+                      "fill": "$fg-secondary",
+                      "content": "Morning coffee, brewed and filtered.",
+                      "lineHeight": 1.2,
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "normal",
+                      "fontStyle": "italic"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "f8QcKi",
+              "gap": 36,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "guDBl",
+                  "fill": "$fg-primary",
+                  "content": "Posts",
+                  "fontFamily": "$font-body",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "w5ANMb",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "Z0V9s",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "rss",
+                      "iconFontFamily": "lucide",
+                      "fill": "$fg-primary"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "gkyzJ",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "github",
+                      "iconFontFamily": "lucide",
+                      "fill": "$fg-primary"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "yPMrP",
+          "width": "fill_container",
+          "gap": 8,
+          "padding": [
+            8,
+            150
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "RlaBB",
+              "width": 14,
+              "height": 14,
+              "iconFontName": "arrow-left",
+              "iconFontFamily": "lucide",
+              "fill": "$fg-secondary"
+            },
+            {
+              "type": "text",
+              "id": "cagBk",
+              "fill": "$fg-secondary",
+              "content": "Back to posts",
+              "fontFamily": "$font-body",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ouyjG",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": [
+            40,
+            260
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "WmC9D",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "sQyPr",
+                  "fill": "$accent-primary",
+                  "width": 44,
+                  "height": 14
+                },
+                {
+                  "type": "text",
+                  "id": "B0FS3",
+                  "fill": "$fg-secondary",
+                  "content": "NOV 02, 2025 • POST 01",
+                  "fontFamily": "$font-caption",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 2
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "n0x60J",
+              "fill": "$fg-primary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Hello World",
+              "lineHeight": 1.05,
+              "fontFamily": "$font-heading",
+              "fontSize": 72,
+              "fontWeight": "500",
+              "fontStyle": "italic"
+            },
+            {
+              "type": "text",
+              "id": "M1mZs",
+              "fill": "$fg-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Initial post that tests if everything is working as expected.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font-body",
+              "fontSize": 20,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "mpjOF",
+              "gap": 14,
+              "padding": [
+                18,
+                0,
+                0,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "UbHcg",
+                  "fill": "$accent-primary",
+                  "width": 32,
+                  "height": 32
+                },
+                {
+                  "type": "frame",
+                  "id": "bvkk2",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "E4LlH",
+                      "fill": "$fg-primary",
+                      "content": "@satiyap",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "caRlr",
+                      "fill": "$fg-secondary",
+                      "content": "3 MIN READ",
+                      "fontFamily": "$font-caption",
+                      "fontSize": 10,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1.5
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GoQ70",
+          "name": "Body",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            16,
+            260,
+            40,
+            260
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "DszDA",
+              "fill": "$fg-primary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "The test",
+              "fontFamily": "$font-heading",
+              "fontSize": 38,
+              "fontWeight": "500",
+              "fontStyle": "italic"
+            },
+            {
+              "type": "text",
+              "id": "Kdwg6",
+              "fill": "$fg-primary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "A simple test message to get stuff going. This should appear in H2 and the rest of the blog should work seamlessly. It should be possible to format the content similar to MD and for things to just work. Let us see if that works over a period of time.",
+              "lineHeight": 1.65,
+              "fontFamily": "$font-body",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "EJFuH",
+              "fill": "$fg-primary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "For now I'm working with the Archie / Kaapi theme, added as a Hugo module instead of a git submodule. Both are very interesting approaches.",
+              "lineHeight": 1.65,
+              "fontFamily": "$font-body",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "hKywq",
+              "width": "fill_container",
+              "stroke": {
+                "thickness": {
+                  "left": 3
+                },
+                "fill": "$accent-primary"
+              },
+              "padding": [
+                12,
+                28
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "DfXii",
+                  "fill": "$fg-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "\"The automatic push trigger should work and this site should be seamlessly updated.\"",
+                  "lineHeight": 1.4,
+                  "fontFamily": "$font-heading",
+                  "fontSize": 24,
+                  "fontWeight": "normal",
+                  "fontStyle": "italic"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Y0RRGl",
+              "width": "fill_container",
+              "fill": "$surface-inverse",
+              "cornerRadius": 4,
+              "layout": "vertical",
+              "gap": 6,
+              "padding": [
+                20,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "CHgpT",
+                  "fill": "$fg-inverse",
+                  "content": "$ hugo new posts/hello-world.md",
+                  "fontFamily": "$font-caption",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "s2d9lb",
+                  "fill": "$fg-inverse",
+                  "content": "$ git commit -am 'Initial post'",
+                  "fontFamily": "$font-caption",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "caoXQ",
+                  "fill": "$fg-inverse",
+                  "content": "$ git push origin main",
+                  "fontFamily": "$font-caption",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "sOq0x",
+                  "fill": "$fg-inverse",
+                  "content": "→ deploying to blog.by2kaapi.com…",
+                  "fontFamily": "$font-caption",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "D3CI5j",
+              "fill": "$fg-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Onward.",
+              "lineHeight": 1.65,
+              "fontFamily": "$font-body",
+              "fontSize": 18,
+              "fontWeight": "normal",
+              "fontStyle": "italic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "m7l1vp",
+      "x": 0,
+      "y": 1800,
+      "name": "Home (mobile)",
+      "clip": true,
+      "width": 390,
+      "height": 780,
+      "fill": "$surface-primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "G1LNBj",
+          "width": "fill_container",
+          "padding": [
+            18,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "qzwDb",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "LA6tk",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "static/logo.png",
+                    "mode": "fit"
+                  },
+                  "width": 72,
+                  "height": 72
+                },
+                {
+                  "type": "frame",
+                  "id": "TC8mD",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "tjWv5",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "gs2pX",
+                          "fill": "$fg-primary",
+                          "content": "by",
+                          "fontFamily": "$font-wordmark",
+                          "fontSize": 20,
+                          "fontWeight": "900",
+                          "letterSpacing": -0.5
+                        },
+                        {
+                          "type": "text",
+                          "id": "sH59q",
+                          "fill": "$accent-tertiary",
+                          "content": "2",
+                          "fontFamily": "$font-wordmark",
+                          "fontSize": 20,
+                          "fontWeight": "900",
+                          "letterSpacing": -0.5
+                        },
+                        {
+                          "type": "text",
+                          "id": "pyF3l",
+                          "fill": "$fg-primary",
+                          "content": "kaapi",
+                          "fontFamily": "$font-wordmark",
+                          "fontSize": 20,
+                          "fontWeight": "900",
+                          "letterSpacing": -0.5
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "T3DzMZ",
+                      "fill": "$fg-secondary",
+                      "content": "Morning coffee, brewed and filtered.",
+                      "lineHeight": 1.2,
+                      "fontFamily": "$font-body",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "fontStyle": "italic"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xLeWi",
+              "gap": 14,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "aDLue",
+                  "fill": "$fg-primary",
+                  "content": "Posts",
+                  "fontFamily": "$font-body",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "i8Viem",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "rss",
+                  "iconFontFamily": "lucide",
+                  "fill": "$fg-primary"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "FMBsF",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "github",
+                  "iconFontFamily": "lucide",
+                  "fill": "$fg-primary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "J8Kq6W",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            40,
+            24,
+            32,
+            24
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "YsV8T",
+              "fill": "$fg-primary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Morning coffee,\nbrewed and filtered.",
+              "lineHeight": 1.08,
+              "textAlign": "center",
+              "fontFamily": "$font-heading",
+              "fontSize": 38,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ffb6X",
+          "name": "Post list",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            16,
+            24,
+            40,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "AT4uS",
+              "fill": "$fg-secondary",
+              "content": "RECENT POSTS",
+              "fontFamily": "$font-caption",
+              "fontSize": 10,
+              "fontWeight": "normal",
+              "letterSpacing": 2.2
+            },
+            {
+              "type": "frame",
+              "id": "HpqL9",
+              "width": "fill_container",
+              "height": 16
+            },
+            {
+              "type": "frame",
+              "id": "KsX5S",
+              "width": "fill_container",
+              "stroke": {
+                "thickness": {
+                  "top": 1
+                },
+                "fill": "$border-subtle"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                20,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "rdqYr",
+                  "fill": "$fg-secondary",
+                  "content": "NOV 02, 2025",
+                  "fontFamily": "$font-caption",
+                  "fontSize": 10,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1.6
+                },
+                {
+                  "type": "text",
+                  "id": "caIqS",
+                  "fill": "$fg-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Hello World",
+                  "fontFamily": "$font-heading",
+                  "fontSize": 24,
+                  "fontWeight": "500",
+                  "fontStyle": "italic"
+                },
+                {
+                  "type": "text",
+                  "id": "IEdID",
+                  "fill": "$fg-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "An initial post that tests if everything is working as expected — Hugo, the Kaapi theme, and the auto-deploy pipeline.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font-body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "L183oG",
+                  "fill": "$accent-primary",
+                  "width": 48,
+                  "height": 4
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "GT00E",
+              "width": "fill_container",
+              "stroke": {
+                "thickness": {
+                  "top": 1
+                },
+                "fill": "$border-subtle"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                20,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "bzXfo",
+                  "fill": "$fg-secondary",
+                  "content": "NOV 05, 2025",
+                  "fontFamily": "$font-caption",
+                  "fontSize": 10,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1.6
+                },
+                {
+                  "type": "text",
+                  "id": "VviQd",
+                  "fill": "$fg-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "About",
+                  "fontFamily": "$font-heading",
+                  "fontSize": 24,
+                  "fontWeight": "500",
+                  "fontStyle": "italic"
+                },
+                {
+                  "type": "text",
+                  "id": "WLkah",
+                  "fill": "$fg-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "A space for thoughts, ideas, and musings. What you'll find here and how to get in touch.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font-body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "K3dnpW",
+                  "fill": "$accent-tertiary",
+                  "width": 48,
+                  "height": 4
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "EcfEM",
+      "x": 510,
+      "y": 1800,
+      "name": "Post (mobile)",
+      "clip": true,
+      "width": 390,
+      "height": 960,
+      "fill": "$surface-primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "WrIEk",
+          "width": "fill_container",
+          "padding": [
+            18,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "T9ywIG",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "f2uLyT",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "static/logo.png",
+                    "mode": "fit"
+                  },
+                  "width": 72,
+                  "height": 72
+                },
+                {
+                  "type": "frame",
+                  "id": "dFb8B",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "J65Uyp",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "t6h1Vr",
+                          "fill": "$fg-primary",
+                          "content": "by",
+                          "fontFamily": "$font-wordmark",
+                          "fontSize": 20,
+                          "fontWeight": "900",
+                          "letterSpacing": -0.5
+                        },
+                        {
+                          "type": "text",
+                          "id": "D2DUV",
+                          "fill": "$accent-tertiary",
+                          "content": "2",
+                          "fontFamily": "$font-wordmark",
+                          "fontSize": 20,
+                          "fontWeight": "900",
+                          "letterSpacing": -0.5
+                        },
+                        {
+                          "type": "text",
+                          "id": "dzDXc",
+                          "fill": "$fg-primary",
+                          "content": "kaapi",
+                          "fontFamily": "$font-wordmark",
+                          "fontSize": 20,
+                          "fontWeight": "900",
+                          "letterSpacing": -0.5
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "MXjwB",
+                      "fill": "$fg-secondary",
+                      "content": "Morning coffee, brewed and filtered.",
+                      "lineHeight": 1.2,
+                      "fontFamily": "$font-body",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "fontStyle": "italic"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xhZ9f",
+              "gap": 14,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "N6yPWW",
+                  "fill": "$fg-primary",
+                  "content": "Posts",
+                  "fontFamily": "$font-body",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "ivEyV",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "rss",
+                  "iconFontFamily": "lucide",
+                  "fill": "$fg-primary"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "jXrJE",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "github",
+                  "iconFontFamily": "lucide",
+                  "fill": "$fg-primary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tiFzD",
+          "width": "fill_container",
+          "gap": 8,
+          "padding": [
+            6,
+            24,
+            14,
+            24
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "miNZw",
+              "width": 12,
+              "height": 12,
+              "iconFontName": "arrow-left",
+              "iconFontFamily": "lucide",
+              "fill": "$fg-secondary"
+            },
+            {
+              "type": "text",
+              "id": "V9sPjR",
+              "fill": "$fg-secondary",
+              "content": "Back to posts",
+              "fontFamily": "$font-body",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Tsdwb",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            12,
+            24,
+            24,
+            24
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "k3MrhO",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "EhRPy",
+                  "fill": "$accent-primary",
+                  "width": 32,
+                  "height": 10
+                },
+                {
+                  "type": "text",
+                  "id": "yIcUd",
+                  "fill": "$fg-secondary",
+                  "content": "NOV 02, 2025",
+                  "fontFamily": "$font-caption",
+                  "fontSize": 10,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1.6
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "TxwE3",
+              "fill": "$fg-primary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Hello World",
+              "lineHeight": 1.05,
+              "fontFamily": "$font-heading",
+              "fontSize": 42,
+              "fontWeight": "500",
+              "fontStyle": "italic"
+            },
+            {
+              "type": "text",
+              "id": "FaqGn",
+              "fill": "$fg-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Initial post that tests if everything is working as expected.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font-body",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "UQHbI",
+              "gap": 10,
+              "padding": [
+                10,
+                0,
+                0,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "S9YRLF",
+                  "fill": "$accent-primary",
+                  "width": 24,
+                  "height": 24
+                },
+                {
+                  "type": "frame",
+                  "id": "FemEP",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "StE4H",
+                      "fill": "$fg-primary",
+                      "content": "@satiyap",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "vPu7W",
+                      "fill": "$fg-secondary",
+                      "content": "3 MIN READ",
+                      "fontFamily": "$font-caption",
+                      "fontSize": 9,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1.4
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "c2r5R",
+          "name": "Body",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": [
+            8,
+            24,
+            40,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "keg8F",
+              "fill": "$fg-primary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "The test",
+              "fontFamily": "$font-heading",
+              "fontSize": 26,
+              "fontWeight": "500",
+              "fontStyle": "italic"
+            },
+            {
+              "type": "text",
+              "id": "l9Uggs",
+              "fill": "$fg-primary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "A simple test message to get stuff going. This should appear in H2 and the rest of the blog should work seamlessly. It should be possible to format the content similar to MD and for things to just work. Let us see if that works over a period of time.",
+              "lineHeight": 1.65,
+              "fontFamily": "$font-body",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "GXEEo",
+              "fill": "$fg-primary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "For now I'm working with the Archie / Kaapi theme, added as a Hugo module instead of a git submodule. Both are very interesting approaches.",
+              "lineHeight": 1.65,
+              "fontFamily": "$font-body",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "Lvchf",
+              "width": "fill_container",
+              "stroke": {
+                "thickness": {
+                  "left": 3
+                },
+                "fill": "$accent-primary"
+              },
+              "padding": [
+                10,
+                18
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "JaaDF",
+                  "fill": "$fg-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "\"The automatic push trigger should work and this site should be seamlessly updated.\"",
+                  "lineHeight": 1.4,
+                  "fontFamily": "$font-heading",
+                  "fontSize": 18,
+                  "fontWeight": "normal",
+                  "fontStyle": "italic"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "zUhFQ",
+              "width": "fill_container",
+              "fill": "$surface-inverse",
+              "cornerRadius": 4,
+              "layout": "vertical",
+              "gap": 5,
+              "padding": [
+                14,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "PbJoT",
+                  "fill": "$fg-inverse",
+                  "content": "$ hugo new posts/hello-world.md",
+                  "fontFamily": "$font-caption",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "q3R2e9",
+                  "fill": "$fg-inverse",
+                  "content": "$ git commit -am 'Initial post'",
+                  "fontFamily": "$font-caption",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "R8U09",
+                  "fill": "$fg-inverse",
+                  "content": "$ git push origin main",
+                  "fontFamily": "$font-caption",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "a1vWwh",
+                  "fill": "$fg-inverse",
+                  "content": "→ deploying to blog.by2kaapi.com…",
+                  "fontFamily": "$font-caption",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "grrKW",
+              "fill": "$fg-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Onward.",
+              "lineHeight": 1.65,
+              "fontFamily": "$font-body",
+              "fontSize": 15,
+              "fontWeight": "normal",
+              "fontStyle": "italic"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "accent-primary": {
+      "type": "color",
+      "value": "#C68B5A"
+    },
+    "accent-secondary": {
+      "type": "color",
+      "value": "#4A3528"
+    },
+    "accent-tertiary": {
+      "type": "color",
+      "value": "#8B5A3C"
+    },
+    "border-subtle": {
+      "type": "color",
+      "value": "#E5DACA"
+    },
+    "fg-inverse": {
+      "type": "color",
+      "value": "#FBF4EB"
+    },
+    "fg-primary": {
+      "type": "color",
+      "value": "#1F140C"
+    },
+    "fg-secondary": {
+      "type": "color",
+      "value": "#7A6A5A"
+    },
+    "font-body": {
+      "type": "string",
+      "value": "Newsreader"
+    },
+    "font-caption": {
+      "type": "string",
+      "value": "Geist Mono"
+    },
+    "font-heading": {
+      "type": "string",
+      "value": "Playfair Display"
+    },
+    "surface-inverse": {
+      "type": "color",
+      "value": "#2B1A10"
+    },
+    "surface-primary": {
+      "type": "color",
+      "value": "#FBF4EB"
+    },
+    "font-wordmark": {
+      "type": "string",
+      "value": "Inter"
+    }
+  }
+}

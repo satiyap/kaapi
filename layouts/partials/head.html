@@ -1,5 +1,14 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
-{{ partialCached "head/css.html" . }}
-{{ partialCached "head/js.html" . }}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ site.Title }} — {{ site.Params.tagline | default "Morning coffee, brewed and filtered." }}{{ else }}{{ .Title }} — {{ site.Title }}{{ end }}</title>
+{{ with .Description | default .Summary | default site.Params.tagline }}<meta name="description" content="{{ . | plainify | truncate 200 }}">{{ end }}
+<link rel="icon" type="image/png" href="{{ "/logo.png" | relURL }}">
+
+<link rel="preload" href="{{ "/fonts/newsreader-400.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "/fonts/playfair-display-500-italic.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "/fonts/inter-900.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "/fonts/geist-mono-400.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+
+<link rel="stylesheet" href="{{ "/css/main.css" | relURL }}">
+
+{{ with site.Params.rssFeed | default "/index.xml" }}<link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ . | relURL }}">{{ end }}

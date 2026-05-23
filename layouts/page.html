@@ -1,27 +1,47 @@
 {{ define "main" }}
+{{ if eq .Section "posts" }}
+  {{/* ----------------- POST DETAIL ----------------- */}}
+  <div class="post-detail-back">
+    <a href="{{ "/" | relURL }}">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to posts
+    </a>
+  </div>
   <article>
-    <h1>{{ .Title }}</h1>
-
-    {{ if .Date }}
-      {{ $dateMachine := .Date | time.Format "2006-01-02" }}
-      {{ $dateHuman := .Date | time.Format "January 2, 2006" }}
-      <div class="post-meta">
-        <div class="post-meta-item">
-          <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-        </div>
-        {{ if .ReadingTime }}
-          <span class="post-meta-separator">•</span>
-          <div class="post-meta-item">
-            {{ .ReadingTime }} min read
-          </div>
+    <header class="post-detail-header">
+      <div class="post-detail-tag-row">
+        <span class="swatch" aria-hidden="true"></span>
+        {{ if .Date }}
+          {{ $machine := .Date | time.Format "2006-01-02" }}
+          {{ $human := .Date | time.Format "Jan 02, 2006" }}
+          <time class="eyebrow" datetime="{{ $machine }}">{{ $human }}{{ if .ReadingTime }} &bull; {{ .ReadingTime }} MIN READ{{ end }}</time>
         {{ end }}
       </div>
-    {{ end }}
-
-    {{ partial "toc.html" . }}
-
-    {{ .Content }}
-
-    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+      <h1 class="post-detail-title">{{ .Title }}</h1>
+      {{ with .Params.description }}
+        <p class="post-detail-subtitle">{{ . }}</p>
+      {{ end }}
+      <div class="post-detail-byline">
+        <span class="avatar" aria-hidden="true"></span>
+        <div class="post-detail-byline-text">
+          {{ with site.Params.author }}<span class="post-detail-byline-name">{{ . }}</span>{{ end }}
+          {{ if .ReadingTime }}<span class="post-detail-byline-reading">{{ .ReadingTime }} MIN READ</span>{{ end }}
+        </div>
+      </div>
+    </header>
+    <div class="post-detail-body">
+      {{ .Content }}
+    </div>
   </article>
+{{ else }}
+  {{/* ----------------- REGULAR PAGE ----------------- */}}
+  <section class="page-hero">
+    <span class="eyebrow">{{ .Title }}</span>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.description }}<p class="lede">{{ . }}</p>{{ end }}
+  </section>
+  <article class="page-body">
+    {{ .Content }}
+  </article>
+{{ end }}
 {{ end }}
