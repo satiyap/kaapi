@@ -7,6 +7,9 @@
 
 <section class="post-list" aria-label="All posts">
   {{ range .Pages.ByDate.Reverse }}
+    {{/* Standalone posts and series overviews sit at the top level in posted  */}}
+    {{/* order; a series' parts are nested under its overview, ordered by part. */}}
+    {{ if not (and .Params.series (ne .Title .Params.series)) }}
     <a class="post-row" href="{{ .RelPermalink }}">
       <div class="post-row-content">
         {{ if .Date }}
@@ -21,6 +24,21 @@
       </div>
       <span class="post-row-accent" aria-hidden="true"></span>
     </a>
+    {{ if .Params.series }}
+      {{ $series := .Params.series }}
+      {{ $parts := (where (where (where site.RegularPages "Type" "posts") "Params.series" $series) "Title" "!=" $series).ByWeight }}
+      {{ with $parts }}
+      <ol class="series-children">
+        {{ range . }}
+          <li><a class="series-child" href="{{ .RelPermalink }}">
+            <span class="series-child-num">{{ printf "%02d" .Weight }}</span>
+            <span class="series-child-title">{{ .LinkTitle }}</span>
+          </a></li>
+        {{ end }}
+      </ol>
+      {{ end }}
+    {{ end }}
+    {{ end }}
   {{ end }}
 </section>
 {{ end }}

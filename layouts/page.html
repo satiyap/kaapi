@@ -14,7 +14,7 @@
         {{ if .Date }}
           {{ $machine := .Date | time.Format "2006-01-02" }}
           {{ $human := .Date | time.Format "Jan 02, 2006" }}
-          <time class="eyebrow" datetime="{{ $machine }}">{{ $human }}{{ if .ReadingTime }} &bull; {{ .ReadingTime }} MIN READ{{ end }}</time>
+          <time class="eyebrow" datetime="{{ $machine }}">{{ $human }}</time>
         {{ end }}
       </div>
       <h1 class="post-detail-title">{{ .Title }}</h1>
@@ -22,7 +22,6 @@
         <p class="post-detail-subtitle">{{ . }}</p>
       {{ end }}
       <div class="post-detail-byline">
-        <span class="avatar" aria-hidden="true"></span>
         <div class="post-detail-byline-text">
           {{ with site.Params.author }}<span class="post-detail-byline-name">{{ . }}</span>{{ end }}
           {{ if .ReadingTime }}<span class="post-detail-byline-reading">{{ .ReadingTime }} MIN READ</span>{{ end }}
@@ -33,6 +32,31 @@
       {{ .Content }}
     </div>
   </article>
+  {{/* ----------------- SERIES PAGER ----------------- */}}
+  {{ if and .Params.series (ne .Title .Params.series) }}
+    {{ $series := .Params.series }}
+    {{ $sib := where (where site.RegularPages "Type" "posts") "Params.series" $series }}
+    {{ $parts := (where $sib "Title" "!=" $series).ByWeight }}
+    {{ $overview := "" }}{{ with where $sib "Title" $series }}{{ $overview = index . 0 }}{{ end }}
+    {{ $prev := false }}{{ $next := false }}
+    {{ range $i, $p := $parts }}
+      {{ if eq $p.RelPermalink $.RelPermalink }}
+        {{ if gt $i 0 }}{{ $prev = index $parts (sub $i 1) }}{{ end }}
+        {{ if lt (add $i 1) (len $parts) }}{{ $next = index $parts (add $i 1) }}{{ end }}
+      {{ end }}
+    {{ end }}
+    <nav class="series-pager" aria-label="{{ $series }} navigation">
+      {{ with $overview }}<a class="series-pager-home" href="{{ .RelPermalink }}">{{ $series }} &middot; all {{ len $parts }} parts</a>{{ end }}
+      <div class="series-pager-row">
+        <span class="series-pager-cell prev">
+          {{ with $prev }}<a class="series-pager-link" href="{{ .RelPermalink }}"><span class="series-pager-dir">&larr; Part {{ .Weight }}</span><span class="series-pager-title">{{ .LinkTitle }}</span></a>{{ end }}
+        </span>
+        <span class="series-pager-cell next">
+          {{ with $next }}<a class="series-pager-link" href="{{ .RelPermalink }}"><span class="series-pager-dir">Part {{ .Weight }} &rarr;</span><span class="series-pager-title">{{ .LinkTitle }}</span></a>{{ end }}
+        </span>
+      </div>
+    </nav>
+  {{ end }}
 {{ else }}
   {{/* ----------------- REGULAR PAGE ----------------- */}}
   <section class="page-hero">

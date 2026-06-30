@@ -278,6 +278,40 @@ main { flex: 1; }
   background: var(--accent-tertiary);
 }
 
+/* Series shown hierarchically in the /posts/ archive: parts nested under */
+/* their overview and numbered by part.                                   */
+.series-children {
+  list-style: none;
+  margin: -6px 0 26px 8px;
+  padding-left: 22px;
+  border-left: 2px solid var(--border-subtle);
+}
+
+.series-child {
+  display: grid;
+  grid-template-columns: 2.6em 1fr;
+  align-items: baseline;
+  gap: 10px;
+  padding: 6px 0;
+}
+
+.series-child-num {
+  font-family: var(--font-caption);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  font-variant-numeric: tabular-nums;
+  color: var(--fg-secondary);
+}
+
+.series-child-title {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--fg-primary);
+  transition: color 0.15s ease;
+}
+
+.series-child:hover .series-child-title { color: var(--accent-tertiary); }
+
 /* --------------------------- PAGE HERO ----------------------------- */
 .page-hero {
   text-align: center;
@@ -316,7 +350,7 @@ main { flex: 1; }
 
 /* ----------------------------- PAGE BODY --------------------------- */
 .page-body {
-  max-width: var(--reading-max);
+  max-width: var(--content-max);
   margin: 0 auto;
   padding: 20px var(--pad-x) 80px;
   font-family: var(--font-body);
@@ -465,6 +499,43 @@ main { flex: 1; }
 
 .post-detail-body > * + * { margin-top: 18px; }
 
+.post-detail-body h4 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 19px;
+  margin-top: 28px;
+}
+
+.post-detail-body hr {
+  border: 0;
+  height: 1px;
+  background: var(--border-subtle);
+  margin: 40px 0;
+}
+
+.post-detail-body table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  margin: 8px 0;
+}
+
+.post-detail-body th,
+.post-detail-body td {
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+}
+
+.post-detail-body th {
+  font-family: var(--font-caption);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--fg-secondary);
+}
+
 .post-detail-body h2 {
   font-family: var(--font-heading);
   font-weight: 400;
@@ -524,11 +595,66 @@ main { flex: 1; }
 
 .post-detail-body img { border-radius: 4px; }
 
+/* ----------------------------- SERIES PAGER ------------------------ */
+.series-pager {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 8px var(--pad-x) 80px;
+}
+
+.series-pager-home {
+  display: block;
+  font-family: var(--font-caption);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--fg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 24px;
+  margin-bottom: 20px;
+  transition: color 0.15s ease;
+}
+.series-pager-home:hover { color: var(--accent-tertiary); }
+
+.series-pager-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.series-pager-cell.next { text-align: right; }
+
+.series-pager-link { display: inline-flex; flex-direction: column; gap: 4px; }
+.series-pager-cell.next .series-pager-link { align-items: flex-end; }
+
+.series-pager-dir {
+  font-family: var(--font-caption);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--fg-secondary);
+}
+
+.series-pager-title {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--fg-primary);
+  transition: color 0.15s ease;
+}
+
+.series-pager-link:hover .series-pager-title { color: var(--accent-tertiary); }
+
 /* ----------------------------- FOOTER ------------------------------ */
 .site-footer {
   max-width: var(--content-max);
-  margin: 0 auto;
-  padding: 24px var(--pad-x) 32px;
+  margin: 48px auto 0;
+  padding: 28px var(--pad-x) 40px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 16px;
   font-family: var(--font-caption);
   font-size: 11px;
   letter-spacing: 1.6px;
@@ -583,4 +709,9 @@ main { flex: 1; }
   .post-detail-body pre { font-size: 11px; padding: 14px 16px; }
 
   .site-footer { padding: 16px 24px 24px; }
+
+  .series-pager { padding: 8px 24px 60px; }
+  .series-pager-row { grid-template-columns: 1fr; gap: 18px; }
+  .series-pager-cell.next { text-align: left; }
+  .series-pager-cell.next .series-pager-link { align-items: flex-start; }
 }

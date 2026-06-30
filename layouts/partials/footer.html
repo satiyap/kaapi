@@ -1,3 +1,4 @@
 <div class="site-footer">
-  &mdash; {{ now.Year }} &mdash;
+  <span>&copy; {{ now.Year }} {{ site.Title }}</span>
+  {{ with site.Params.author }}<span class="site-footer-by">{{ . }}</span>{{ end }}
 </div>

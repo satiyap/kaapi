@@ -2,6 +2,11 @@
 <section class="post-list" aria-label="Recent posts">
   <div class="post-list-eyebrow">Recent Posts</div>
   {{ range where site.RegularPages "Type" "posts" }}
+    {{/* Collapse multi-part series to a single entry: show standalone posts  */}}
+    {{/* and series overviews, hide the individual parts. A part has `series`  */}}
+    {{/* set and a title different from the series name; the overview shares   */}}
+    {{/* its title with the series name. No series -> always shown.            */}}
+    {{ if not (and .Params.series (ne .Title .Params.series)) }}
     <a class="post-row" href="{{ .RelPermalink }}">
       <div class="post-row-content">
         {{ if .Date }}
@@ -16,6 +21,7 @@
       </div>
       <span class="post-row-accent" aria-hidden="true"></span>
     </a>
+    {{ end }}
   {{ end }}
 </section>
 {{ end }}
