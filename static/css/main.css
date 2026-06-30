@@ -4,13 +4,6 @@
 /* ---------------------------------------------------------------- */
 
 @font-face {
-  font-family: 'Playfair Display';
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/playfair-display-500-italic.woff2') format('woff2');
-}
-@font-face {
   font-family: 'Newsreader';
   font-style: normal;
   font-weight: 400;
@@ -58,14 +51,6 @@
 /* faces. When the web font swaps in, the layout doesn't jump.         */
 
 @font-face {
-  font-family: 'Playfair Display Fallback';
-  src: local('Georgia');
-  ascent-override: 95%;
-  descent-override: 22%;
-  line-gap-override: 0%;
-  size-adjust: 102%;
-}
-@font-face {
   font-family: 'Newsreader Fallback';
   src: local('Georgia');
   ascent-override: 91%;
@@ -101,7 +86,7 @@
   --accent-secondary: #4A3528;
   --accent-tertiary: #8B5A3C;
 
-  --font-heading: 'Playfair Display', 'Playfair Display Fallback', Georgia, serif;
+  --font-heading: 'Newsreader', 'Newsreader Fallback', Georgia, serif;
   --font-body:    'Newsreader', 'Newsreader Fallback', Georgia, serif;
   --font-caption: 'Geist Mono', 'Geist Mono Fallback', ui-monospace, SFMono-Regular, monospace;
   --font-wordmark:'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -271,9 +256,9 @@ main { flex: 1; }
 
 .post-row-title {
   font-family: var(--font-heading);
-  font-weight: 500;
-  font-style: italic;
-  font-size: 34px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 26px;
   color: var(--fg-primary);
 }
 
@@ -315,9 +300,9 @@ main { flex: 1; }
 
 .page-hero h1 {
   font-family: var(--font-heading);
-  font-weight: 500;
-  font-style: italic;
-  font-size: clamp(42px, 6vw, 78px);
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(30px, 4vw, 44px);
   line-height: 1.05;
   max-width: 14ch;
 }
@@ -342,18 +327,18 @@ main { flex: 1; }
 
 .page-body h2 {
   font-family: var(--font-heading);
-  font-weight: 500;
-  font-style: italic;
-  font-size: 28px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
   margin-top: 32px;
   margin-bottom: 12px;
 }
 
 .page-body h3 {
   font-family: var(--font-heading);
-  font-weight: 500;
-  font-style: italic;
-  font-size: 22px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 19px;
   margin-top: 24px;
   margin-bottom: 10px;
 }
@@ -393,7 +378,7 @@ main { flex: 1; }
 }
 
 .post-detail-header {
-  max-width: var(--reading-max);
+  max-width: var(--content-max);
   margin: 0 auto;
   padding: 24px var(--pad-x) 32px;
   display: flex;
@@ -424,9 +409,9 @@ main { flex: 1; }
 
 .post-detail-title {
   font-family: var(--font-heading);
-  font-weight: 500;
-  font-style: italic;
-  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(30px, 4vw, 44px);
   line-height: 1.05;
 }
 
@@ -469,7 +454,7 @@ main { flex: 1; }
 }
 
 .post-detail-body {
-  max-width: var(--reading-max);
+  max-width: var(--content-max);
   margin: 0 auto;
   padding: 16px var(--pad-x) 80px;
   font-family: var(--font-body);
@@ -482,17 +467,17 @@ main { flex: 1; }
 
 .post-detail-body h2 {
   font-family: var(--font-heading);
-  font-weight: 500;
-  font-style: italic;
-  font-size: 38px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 28px;
   margin-top: 32px;
 }
 
 .post-detail-body h3 {
   font-family: var(--font-heading);
-  font-weight: 500;
-  font-style: italic;
-  font-size: 26px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 21px;
   margin-top: 24px;
 }
 
@@ -508,10 +493,10 @@ main { flex: 1; }
 .post-detail-body blockquote {
   border-left: 3px solid var(--accent-primary);
   padding: 8px 28px;
-  font-family: var(--font-heading);
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-weight: 400;
   font-style: italic;
-  font-size: 24px;
+  font-size: 21px;
   line-height: 1.4;
   color: var(--fg-primary);
 }
