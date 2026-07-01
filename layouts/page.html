@@ -50,6 +50,18 @@
         {{ end }}
       {{ end }}
     {{ end }}
+    {{/* Render the pager only when a published part (or overview) exists  */}}
+    {{/* to move to. Draft parts are absent from site.RegularPages, so a   */}}
+    {{/* drafts-only series collapses to nothing instead of an empty nav.  */}}
+    {{ $hasOverview := false }}
+    {{ with $overview }}{{ $hasOverview = true }}{{ end }}
+    {{ $hasNav := false }}
+    {{ if $isOverview }}
+      {{ $hasNav = gt (len $parts) 0 }}
+    {{ else }}
+      {{ $hasNav = or (gt (len $parts) 1) $hasOverview }}
+    {{ end }}
+    {{ if $hasNav }}
     <nav class="series-pager" aria-label="{{ $series }} navigation">
       {{ if $isOverview }}
         <span class="series-pager-home">{{ $series }} &middot; {{ len $parts }} parts</span>
@@ -65,6 +77,7 @@
         </span>
       </div>
     </nav>
+    {{ end }}
   {{ end }}
 {{ else }}
   {{/* ----------------- REGULAR PAGE ----------------- */}}

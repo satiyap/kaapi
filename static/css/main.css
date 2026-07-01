@@ -595,6 +595,54 @@ main { flex: 1; }
 
 .post-detail-body img { border-radius: 4px; }
 
+/* ----------------------------- FOOTNOTES --------------------------- */
+/* Goldmark renders [^n] refs as sup.footnote-ref and collects every    */
+/* definition into div.footnotes at the end of the content.             */
+.post-detail-body sup[id^="fnref"],
+.page-body sup[id^="fnref"] { line-height: 0; }
+
+.post-detail-body .footnote-ref,
+.page-body .footnote-ref {
+  font-family: var(--font-caption);
+  font-size: 0.9em;
+  color: var(--accent-tertiary);
+  border-bottom: 0;
+  padding: 0 2px;
+}
+.post-detail-body .footnote-ref:hover,
+.page-body .footnote-ref:hover { color: var(--accent-secondary); }
+
+.post-detail-body .footnotes,
+.page-body .footnotes {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--fg-secondary);
+}
+
+.post-detail-body .footnotes hr,
+.page-body .footnotes hr { margin: 48px 0 20px; }
+
+.post-detail-body .footnotes ol,
+.page-body .footnotes ol { padding-left: 20px; }
+
+.post-detail-body .footnotes li,
+.page-body .footnotes li { margin-top: 6px; }
+
+.post-detail-body .footnotes li:target,
+.page-body .footnotes li:target {
+  background: color-mix(in oklab, var(--accent-primary) 14%, transparent);
+}
+
+.post-detail-body .footnotes p,
+.page-body .footnotes p { margin: 0; }
+
+.post-detail-body .footnote-backref,
+.page-body .footnote-backref {
+  border-bottom: 0;
+  margin-left: 4px;
+  color: var(--accent-tertiary);
+}
+
 /* ----------------------------- SERIES PAGER ------------------------ */
 .series-pager {
   max-width: var(--content-max);
